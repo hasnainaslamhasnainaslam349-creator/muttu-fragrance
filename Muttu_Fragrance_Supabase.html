@@ -1,0 +1,3411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muttu Fragrance | Premium Perfumes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+</head>
+<style>
+    
+    /* =========================================================
+   MUTTU FRAGRANCE
+   MAIN STYLE SHEET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f6f1;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-name span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand-name small {
+    margin-top: 5px;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #9a7b28;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.desktop-nav a {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: #b48a2c;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    transition: 0.3s ease;
+}
+
+.desktop-nav a:hover {
+    color: #a17b27;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+    width: 43px;
+    height: 43px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    background: #111;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 800%;
+    height: 100%;
+    transition: transform 0.8s ease;
+}
+
+.slide {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+    height: 100%;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.28),
+            rgba(0, 0, 0, 0.15)
+        );
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    min-height: 650px;
+    width: min(1180px, 92%);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.small-title {
+    color: #d7b55c;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.hero-content h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.9;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 span {
+    color: #d7b55c;
+}
+
+.hero-content > p:not(.small-title) {
+    max-width: 470px;
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #eee;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 14px 28px;
+    background: #d7b55c;
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+.main-button:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.slider-btn {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(0,0,0,0.2);
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: #d7b55c;
+    color: #111;
+    border-color: #d7b55c;
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.slider-dots {
+    position: absolute;
+    z-index: 10;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    transition: 0.3s ease;
+}
+
+.dot.active {
+    width: 28px;
+    border-radius: 20px;
+    background: #d7b55c;
+}
+
+
+/* =========================================================
+   MOVING ANNOUNCEMENT
+========================================================= */
+
+.announcement {
+    overflow: hidden;
+    background: #171717;
+    color: #d7b55c;
+    white-space: nowrap;
+    padding: 12px 0;
+}
+
+.announcement-track {
+    display: inline-block;
+    padding-left: 100%;
+    animation: moveText 22s linear infinite;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-section {
+    padding: 45px 0 10px;
+}
+
+.search-box {
+    max-width: 650px;
+    margin: auto;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: #b48a2c;
+    box-shadow: 0 8px 35px rgba(180,138,44,0.12);
+}
+
+.search-box span {
+    font-size: 26px;
+    color: #a27b28;
+}
+
+.search-box input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 14px;
+    color: #222;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.brands-section {
+    padding: 80px 0 100px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading > p:first-child,
+.section-label {
+    color: #a27b28;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 6vw, 62px);
+    font-weight: 600;
+}
+
+.section-heading h2 span,
+.about-content h2 span,
+.contact-content h2 span {
+    color: #a27b28;
+}
+
+.heading-line {
+    width: 55px;
+    height: 2px;
+    margin: 18px auto;
+    background: #c29a3c;
+}
+
+.section-description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e6e2d9;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.7s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-tag {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 7px 11px;
+    background: #171717;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.product-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.product-type {
+    color: #a27b28;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.product-info h3 {
+    margin-top: 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.product-description {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 13px auto;
+    max-width: 290px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.new-price {
+    color: #a27b28;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    background: #171717;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: #b18a34;
+    color: #111;
+}
+
+
+/* =========================================================
+   HIDDEN EDIT BUTTON
+========================================================= */
+
+.edit-button {
+    display: block;
+    margin: 7px auto 0;
+    border: 0;
+    background: transparent;
+    color: #bdbdbd;
+    font-size: 8px;
+    padding: 2px 5px;
+    opacity: 0.22;
+    transition: none;
+}
+
+.edit-button:hover {
+    color: #bdbdbd;
+    background: transparent;
+    opacity: 0.35;
+}
+
+
+/* =========================================================
+   ADD PRODUCT
+========================================================= */
+
+.add-product-area {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.add-product-button {
+    border: 0;
+    background: transparent;
+    color: #aaa;
+    font-size: 11px;
+    padding: 8px;
+    transition: 0.3s ease;
+}
+
+.add-product-button:hover {
+    color: #a27b28;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features-section {
+    padding: 100px 0;
+    background: #171717;
+    color: #fff;
+}
+
+.features-section .section-heading {
+    margin-bottom: 55px;
+}
+
+.features-section .section-heading h2 {
+    color: #fff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s ease;
+}
+
+.feature:hover {
+    border-color: rgba(215,181,92,0.5);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 28px;
+    color: #d7b55c;
+    margin-bottom: 18px;
+}
+
+.feature h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.feature p {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    padding: 110px 0;
+    background: #f3f0e9;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-image {
+    height: 520px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    margin-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(43px, 5vw, 65px);
+    line-height: 1;
+    font-weight: 600;
+}
+
+.about-content p:not(.section-label) {
+    margin-top: 20px;
+    color: #707070;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.outline-button {
+    display: inline-flex;
+    margin-top: 30px;
+    padding: 13px 25px;
+    border: 1px solid #171717;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.outline-button:hover {
+    background: #171717;
+    color: #fff;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding: 100px 0;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    padding: 65px;
+    background: #171717;
+    color: #fff;
+}
+
+.contact-content h2 {
+    margin-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(43px, 5vw, 65px);
+    line-height: 1;
+    font-weight: 600;
+}
+
+.contact-content > p:not(.section-label) {
+    max-width: 500px;
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contact-whatsapp {
+    display: inline-flex;
+    margin-top: 28px;
+    padding: 13px 25px;
+    background: #d7b55c;
+    color: #111;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact-whatsapp:hover {
+    background: #fff;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+}
+
+.contact-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-item span {
+    display: block;
+    color: #d7b55c;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.contact-item a,
+.contact-item p {
+    color: #eee;
+    font-size: 13px;
+}
+
+.contact-item a:hover {
+    color: #d7b55c;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: #0e0e0e;
+    color: #fff;
+}
+
+.footer-container {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+}
+
+.footer h3 span {
+    color: #d7b55c;
+}
+
+.footer p {
+    margin-top: 7px;
+    color: #777;
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #aaa;
+    font-size: 11px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d7b55c;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    padding: 18px;
+}
+
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: min(460px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+}
+
+.modal-box h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+}
+
+.modal-subtitle {
+    margin: 7px 0 20px;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    color: #777;
+}
+
+.modal-box input,
+.modal-box textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 13px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 12px;
+    background: #fafafa;
+}
+
+.modal-box textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.modal-box input:focus,
+.modal-box textarea:focus {
+    border-color: #b18a34;
+}
+
+.modal-main-button {
+    width: 100%;
+    padding: 13px;
+    border: 0;
+    background: #171717;
+    color: #fff;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.modal-main-button:hover {
+    background: #b18a34;
+    color: #111;
+}
+
+.edit-form {
+    display: none;
+    margin-top: 18px;
+}
+
+.edit-form.show {
+    display: block;
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1500;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #171717;
+    color: #d7b55c;
+    font-size: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-5px);
+    background: #d7b55c;
+    color: #111;
+}
+
+
+/* =========================================================
+   SEARCH HIDE
+========================================================= */
+
+.product-card.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 45px;
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        min-height: 72px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-name span {
+        font-size: 25px;
+    }
+
+    .brand-name small {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        border-top: 1px solid #eee;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        padding: 16px 6%;
+        border-bottom: 1px solid #eee;
+        font-size: 13px;
+    }
+
+    .mobile-menu a:hover {
+        background: #f7f3e9;
+        color: #a27b28;
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .hero-content {
+        min-height: 590px;
+        padding-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 59px;
+    }
+
+    .hero-content > p:not(.small-title) {
+        font-size: 13px;
+        max-width: 330px;
+    }
+
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 25px;
+    }
+
+    .prev {
+        left: 12px;
+    }
+
+    .next {
+        right: 12px;
+    }
+
+    .search-section {
+        padding-top: 30px;
+    }
+
+    .search-box {
+        height: 52px;
+    }
+
+    .brands-section {
+        padding: 65px 0 75px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .product-image {
+        height: 430px;
+    }
+
+    .features-section {
+        padding: 75px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        padding: 28px;
+    }
+
+    .about-section {
+        padding: 75px 0;
+    }
+
+    .about-image {
+        height: 380px;
+    }
+
+    .about-content h2 {
+        font-size: 47px;
+    }
+
+    .contact-section {
+        padding: 65px 0;
+    }
+
+    .contact-box {
+        padding: 32px 23px;
+    }
+
+    .contact-content h2 {
+        font-size: 47px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .small-title {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .product-image {
+        height: 360px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .about-content h2,
+    .contact-content h2 {
+        font-size: 42px;
+    }
+
+}
+
+/* PREMIUM HEADER + LOGO */
+.header{background:#15130f;color:#f8f1df;border-bottom:2px solid #c9a34e;box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.logo{background:#15130f;border:2px solid #c9a34e;padding:3px;object-fit:contain}
+.brand-name span{color:#fff4d4}.brand-name small{color:#d7b55c}
+.desktop-nav a{color:#f8f1df}.desktop-nav a:hover{color:#e3bd63}
+.menu-button{background:#242018;color:#f4d47f;border-color:#c9a34e}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.cart-toggle{position:relative;border:1px solid #c9a34e;background:#c9a34e;color:#17130b;border-radius:999px;padding:12px 17px;font-weight:600;font-size:13px;white-space:nowrap}
+.cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;margin-left:5px;border-radius:50%;background:#17130b;color:#f8d77b;font-size:11px}
+.cart-panel{position:fixed;z-index:4000;right:0;top:0;width:min(410px,100%);height:100vh;background:#fffdf8;box-shadow:-15px 0 45px #0003;transform:translateX(110%);transition:transform .3s ease;display:flex;flex-direction:column}
+.cart-panel.open{transform:translateX(0)}
+.cart-head{display:flex;justify-content:space-between;align-items:center;padding:22px;background:#17130f;color:#f5d27a}
+.cart-head h2{font-family:'Cormorant Garamond',serif;font-size:30px}.cart-close{border:0;background:transparent;color:white;font-size:28px}
+.cart-items{padding:15px;overflow:auto;flex:1}.cart-row{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #eee5d3}.cart-row img{width:64px;height:70px;object-fit:cover;background:#eee}.cart-row h4{font-size:13px}.cart-row p{font-size:12px;color:#98701f;margin-top:5px}.cart-row button{border:0;background:#f2e7cf;padding:6px 8px;border-radius:5px}
+.cart-foot{padding:20px;border-top:1px solid #e8dfce}.cart-total{display:flex;justify-content:space-between;font-weight:700;margin-bottom:14px}.cart-checkout{display:block;text-align:center;background:#17130f;color:#f5d27a;padding:14px;font-size:13px;font-weight:600}
+.add-to-cart{width:100%;border:0;background:#c9a34e;color:#17130f;padding:12px;margin-top:8px;font-size:12px;font-weight:600;transition:.2s}.add-to-cart:hover{background:#17130f;color:#f5d27a}
+.edit-button{font-size:9px;opacity:.35}.edit-button:hover{opacity:1;color:#8a6519}
+.modal-box input[type=file]{background:#fff;padding:10px}.cart-overlay{display:none;position:fixed;inset:0;background:#0007;z-index:3999}.cart-overlay.show{display:block}
+@media(max-width:700px){.nav-container{gap:8px}.nav-actions{gap:8px}.cart-toggle{padding:10px 11px;font-size:11px}.logo-area{gap:7px}.brand-name span{font-size:23px}.brand-name small{letter-spacing:2px}}
+
+
+
+
+/* Small, subtle Edit and Delete buttons */
+.product-admin-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.product-admin-actions .edit-button,
+.product-admin-actions .delete-button {
+    display: inline-block;
+    margin: 0;
+    padding: 3px 6px;
+    border: 0;
+    background: transparent;
+    color: #b8b1a3;
+    font-size: 9px;
+    font-weight: 400;
+    opacity: 0.35;
+    cursor: pointer;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.product-admin-actions .edit-button:hover,
+.product-admin-actions .delete-button:hover {
+    opacity: 0.85;
+    color: #a27b28;
+    background: transparent;
+}
+
+
+
+
+
+
+/* PREMIUM PERFUME SHOWCASE */
+.premium-showcase {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 0;
+    background:
+        radial-gradient(ellipse at 75% 50%, #51401e 0%, #211b12 38%, #111 75%);
+    color: #fff;
+}
+
+.premium-showcase::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(215,181,92,.25);
+    border-radius: 50%;
+    top: -130px;
+    right: -70px;
+}
+
+.premium-showcase-inner {
+    width: min(1100px, 90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.premium-showcase-image {
+    position: relative;
+    padding: 18px;
+    border: 1px solid rgba(215,181,92,.45);
+}
+
+.premium-showcase-image img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.premium-showcase-image:hover img {
+    transform: scale(1.025);
+}
+
+.premium-showcase-content .showcase-label {
+    color: #d7b55c;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.premium-showcase-content h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.premium-showcase-content h2 span {
+    display: block;
+    color: #d7b55c;
+}
+
+.premium-showcase-content p {
+    max-width: 420px;
+    margin-top: 22px;
+    color: #ded8ca;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.showcase-button {
+    display: inline-flex;
+    margin-top: 28px;
+    padding: 14px 25px;
+    background: #d7b55c;
+    color: #17130f;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: .3s ease;
+}
+
+.showcase-button:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+    .premium-showcase {
+        padding: 50px 0;
+    }
+
+    .premium-showcase-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .premium-showcase-image img {
+        height: 300px;
+    }
+
+    .premium-showcase-content {
+        text-align: center;
+    }
+
+    .premium-showcase-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 25px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #25d366, #087d42);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+   /* box-shadow: 0 0 15px #25d36699,
+                0 0 35px #25d36655;
+   /**/
+}
+
+.whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 25px #25d366,
+                0 0 45px #25d36688;
+}
+
+@keyframes whatsappPulse {
+    0%, 100% {
+        box-shadow: 0 0 12px #25d36688;
+    }
+    50% {
+        box-shadow: 0 0 28px #25d366,
+                    0 0 45px #25d36666;
+    }
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        right: 15px;
+        bottom: 18px;
+    }
+}
+
+
+
+
+
+
+
+/* PRODUCT GALLERY */
+.gallery-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: rgba(0,0,0,.8);
+}
+.gallery-modal.show { display: flex; }
+
+.gallery-box {
+    width: min(850px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    background: #fffdf8;
+    padding: 25px;
+    border: 1px solid #c9a34e;
+}
+.gallery-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+}
+.gallery-box h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    padding-right: 35px;
+}
+.gallery-main-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #f2eee5;
+    margin: 15px 0;
+}
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+}
+.gallery-thumbnails img {
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+.gallery-stock {
+    margin: 15px 0;
+    color: #70531b;
+    font-size: 14px;
+    font-weight: 600;
+}
+.gallery-buy, .gallery-admin {
+    display: inline-block;
+    border: 0;
+    padding: 12px 18px;
+    margin: 5px 5px 5px 0;
+    background: #17130f;
+    color: #f5d27a;
+    font-size: 12px;
+}
+.gallery-admin { background: #eee5d3; color: #40331b; }
+.product-image { cursor: pointer; }
+
+@media(max-width:600px) {
+    .gallery-box { padding: 18px; }
+    .gallery-main-image { height: 230px; }
+    .gallery-thumbnails { grid-template-columns: repeat(4, 1fr); }
+    .gallery-thumbnails img { height: 65px; }
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/923482286886"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16 .5A15.4 15.4 0 0 0 2.7 23.7L.5 31.5l8-2.1A15.5 15.5 0 1 0 16 .5Zm0 28.2c-2.4 0-4.7-.6-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A12.7 12.7 0 1 1 16 28.7Zm7-9.5c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.4-.2.3-.5.3-.9.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.8-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5Z"/>
+    </svg>
+</a>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo-area">
+            <img src="muttu.jpg" alt="Muttu Fragrance Logo" class="logo">
+            <div class="brand-name">
+                <span>Muttu</span>
+                <small>FRAGRANCE</small>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#brands">Brands</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="cart-toggle" id="cartToggle" type="button" aria-label="Open shopping cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+        <!-- Mobile Menu Button -->
+        <button class="menu-button" id="menuButton" aria-label="Open Menu">
+            ☰
+        </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" style="color: black;">
+        <a href="#home">Home</a>
+        <a href="#brands">Brands</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO / SLIDER ================= -->
+
+<section class="hero" id="home">
+
+    <div class="slider">
+
+        <div class="slides" id="slides">
+
+            <div class="slide">
+                <img src="slaider1.jpg" alt="Vow Soul For Unisex">
+            </div>
+
+            <div class="slide">
+                <img src="slaideer2.jpg" alt="Stately Empir For Man">
+            </div>
+
+            <div class="slide">
+                <img src="slaider3.jpg" alt="Golden Key For Female">
+            </div>
+
+            ```html
+<div class="slide">
+    <img src="slaider4.jpg" alt="Slide 4">
+</div>
+
+<div class="slide">
+    <img src="slaider5.jpg" alt="Slide 5">
+</div>
+
+<div class="slide">
+    <img src="slaider6.jpg" alt="Slide 6">
+</div>
+
+<div class="slide">
+    <img src="slaider7.jpg" alt="Slide 7">
+</div>
+
+<div class="slide">
+    <img src="slaider8.jpg" alt="Slide 8">
+</div>
+```
+
+        </div>
+
+        <button class="slider-btn prev" id="prevBtn" style="margin-top: -20px;">‹</button>
+        <button class="slider-btn next" id="nextBtn" style="margin-top: -20px;">›</button>
+
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+
+    <div class="hero-content">
+
+        <p class="small-title">DISCOVER YOUR SIGNATURE SCENT</p>
+
+        <h1>Muttu <span>Fragrance</span></h1>
+
+        <p>
+            Premium fragrances crafted to make every moment
+            unforgettable.
+        </p>
+
+        <a href="#brands" class="main-button">
+            Explore Collection
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOVING LINE ================= -->
+
+<div class="announcement">
+    <div class="announcement-track">
+        ✦ Premium Fragrances &nbsp;&nbsp;&nbsp;
+        ✦ Long Lasting Scents &nbsp;&nbsp;&nbsp;
+        ✦ Order Easily on WhatsApp &nbsp;&nbsp;&nbsp;
+        ✦ Premium Fragrances &nbsp;&nbsp;&nbsp;
+        ✦ Long Lasting Scents &nbsp;&nbsp;&nbsp;
+        ✦ Order Easily on WhatsApp
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your favorite fragrance..."
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BRANDS ================= -->
+
+<section class="brands-section" id="brands">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Signature <span>Fragrances</span></h2>
+
+            <div class="heading-line"></div>
+
+            <p class="section-description">
+                Discover fragrances carefully selected for men,
+                women and everyone who loves an unforgettable scent.
+            </p>
+
+        </div>
+
+
+        <div class="products-grid" id="productsGrid">
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product-card" data-name="Vow Soul For Unisex">
+
+                <div class="product-image">
+
+                    <img src="product1.jpg" alt="Vow Soul For Unisex">
+
+                    <span class="product-tag">UNISEX</span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-type">MUTTU COLLECTION</p>
+
+                    <h3>Vow Soul For Unisex</h3>
+
+                    <p class="product-description">
+                        A beautiful balanced fragrance designed for
+                        those who love a confident and elegant scent.
+                    </p>
+
+                    <div class="price">
+
+                        <span class="old-price">Rs. 2300</span>
+
+                        <span class="new-price">Rs. 2200</span>
+
+                    </div>
+
+                    <a
+                        href="https://wa.me/923482286886?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20Vow%20Soul%20For%20Unisex%20perfume."
+                        target="_blank"
+                        class="whatsapp-button"
+                    >
+                        Order on WhatsApp
+                    </a>
+
+                    <button class="edit-button" data-product="0">
+                        Edit
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product-card" data-name="Stately Empir For Man">
+
+                <div class="product-image">
+
+                    <img src="product2.jpg" alt="Stately Empir For Man">
+
+                    <span class="product-tag">FOR MEN</span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-type">MUTTU COLLECTION</p>
+
+                    <h3>Stately Empir For Man</h3>
+
+                    <p class="product-description">
+                        A bold masculine fragrance created for
+                        confidence, presence and unforgettable moments.
+                    </p>
+
+                    <div class="price">
+
+                        <span class="old-price">Rs. 2200</span>
+
+                        <span class="new-price">Rs. 2100</span>
+
+                    </div>
+
+                    <a
+                        href="https://wa.me/923482286886?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20Stately%20Empir%20For%20Man%20perfume."
+                        target="_blank"
+                        class="whatsapp-button"
+                    >
+                        Order on WhatsApp
+                    </a>
+
+                    <button class="edit-button" data-product="1">
+                        Edit
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product-card" data-name="Golden Key For Female">
+
+                <div class="product-image">
+
+                    <img src="product3.jpg" alt="Golden Key For Female">
+
+                    <span class="product-tag">FOR WOMEN</span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-type">MUTTU COLLECTION</p>
+
+                    <h3>Golden Key For Female</h3>
+
+                    <p class="product-description">
+                        An elegant feminine fragrance with a luxurious
+                        character for beautiful everyday moments.
+                    </p>
+
+                    <div class="price">
+
+                        <span class="old-price">Rs. 2450</span>
+
+                        <span class="new-price">Rs. 2350</span>
+
+                    </div>
+
+                    <a
+                        href="https://wa.me/923482286886?text=Assalam-o-Alaikum%2C%20I%20want%20to%20order%20Golden%20Key%20For%20Female%20perfume."
+                        target="_blank"
+                        class="whatsapp-button"
+                    >
+                        Order on WhatsApp
+                    </a>
+
+                    <button class="edit-button" data-product="2">
+                        Edit
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ADD PRODUCT -->
+
+        <div class="add-product-area">
+
+            <button id="addProductButton" class="add-product-button">
+                + Add New Fragrance
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="features-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>THE MUTTU EXPERIENCE</p>
+
+            <h2>Why Choose <span>Us?</span></h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature">
+
+                <div class="feature-icon">✦</div>
+
+                <h3>Premium Scents</h3>
+
+                <p>
+                    Carefully selected fragrances with an elegant
+                    and memorable character.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">♢</div>
+
+                <h3>Elegant Collection</h3>
+
+                <p>
+                    Fragrances for men, women and everyone who
+                    appreciates a beautiful scent.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">✓</div>
+
+                <h3>Easy Ordering</h3>
+
+                <p>
+                    Choose your fragrance and contact us directly
+                    through WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">♡</div>
+
+                <h3>Made With Care</h3>
+
+                <p>
+                    Every fragrance is presented with attention
+                    to quality and customer experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section" id="about">
+
+    <div class="container about-container">
+
+        <div class="about-image">
+
+            <img src="product3.jpg" alt="Muttu Fragrance">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">ABOUT MUTTU FRAGRANCE</p>
+
+            <h2>Find a Scent That Feels <span>Like You.</span></h2>
+
+            <p>
+                At Muttu Fragrance, we believe a fragrance is more
+                than just a scent. It is part of your personality,
+                your memories and the moments people remember about you.
+            </p>
+
+            <p>
+                Our collection brings together elegant fragrances
+                for different personalities and occasions, making it
+                easier to find a scent that truly feels like you.
+            </p>
+
+            <a href="#brands" class="outline-button">
+                View Our Collection
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="contact-content">
+
+                <p class="section-label">GET IN TOUCH</p>
+
+                <h2>Ready to Find Your <span>Fragrance?</span></h2>
+
+                <p>
+                    Have a question or want to place an order?
+                    Contact Muttu Fragrance directly on WhatsApp.
+                </p>
+
+                <a
+                    href="https://wa.me/923482286886"
+                    target="_blank"
+                    class="contact-whatsapp"
+                >
+                    Chat on WhatsApp
+                </a>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <div class="contact-item">
+
+                    <span>WhatsApp</span>
+
+                    <a
+                        href="https://wa.me/923482286886"
+                        target="_blank"
+                    >
+                        +92 348 2286886
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>Email</span>
+
+                    <a href="mailto:omash@jmail.com">
+                        muttufragrance.gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>Location</span>
+
+                    <p>Matli, Pakistan</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <div>
+
+            <h3>Muttu <span>Fragrance</span></h3>
+
+            <p>
+                Discover your signature scent.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#brands">Brands</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Muttu Fragrance. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= EDIT MODAL ================= -->
+
+<div class="modal" id="editModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal" id="closeEditModal">
+            ×
+        </button>
+
+        <h2>Edit Product</h2>
+
+        <p class="modal-subtitle">
+            Enter admin password to continue.
+        </p>
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Admin Password"
+        >
+
+        <button id="passwordButton" class="modal-main-button">
+            Continue
+        </button>
+
+        <div id="editForm" class="edit-form">
+
+            <input
+                type="text"
+                id="editName"
+                placeholder="Product Name"
+            >
+
+            <input
+                type="number"
+                id="editOldPrice"
+                placeholder="Original Price"
+            >
+
+            <input
+                type="number"
+                id="editNewPrice"
+                placeholder="Sale Price"
+            >
+
+            <label for="editImageFile">Choose a new product image (optional)</label>
+            <input type="file" id="editImageFile" accept="image/*">
+
+            <textarea id="editDescription" placeholder="Product Description"></textarea>
+            <button id="saveEdit" class="modal-main-button">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ADD PRODUCT MODAL ================= -->
+
+<div class="modal" id="addModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal" id="closeAddModal">
+            ×
+        </button>
+
+        <h2>Add New Fragrance</h2>
+
+        <p class="modal-subtitle">
+            Enter admin password to add a new product.
+        </p>
+
+        <input
+            type="password"
+            id="addPassword"
+            placeholder="Admin Password"
+        >
+
+        <button id="addPasswordButton" class="modal-main-button">
+            Continue
+        </button>
+
+        <div id="addForm" class="edit-form">
+
+            <input
+                type="text"
+                id="newProductName"
+                placeholder="Product Name"
+            >
+
+            <input
+                type="number"
+                id="newOldPrice"
+                placeholder="Original Price"
+            >
+
+            <input
+                type="number"
+                id="newSalePrice"
+                placeholder="Sale Price"
+            >
+
+            <label for="newProductImage">Choose product image</label>
+            <input type="file" id="newProductImage" accept="image/*" required>
+
+            <textarea
+                id="newProductDescription"
+                placeholder="Product Description"
+            ></textarea>
+
+            <button id="saveNewProduct" class="modal-main-button">
+                Add Product
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+  <div class="cart-head"><h2>Your Cart</h2><button class="cart-close" id="cartClose" aria-label="Close cart">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot"><div class="cart-total"><span>Total</span><span id="cartTotal">Rs. 0</span></div><a class="cart-checkout" id="cartCheckout" href="https://wa.me/923482286886" target="_blank" rel="noopener">Order Cart on WhatsApp</a></div>
+</aside>
+
+
+
+<!-- PRODUCT GALLERY -->
+<div class="gallery-modal" id="galleryModal">
+  <div class="gallery-box">
+    <button class="gallery-close" id="galleryClose" type="button">×</button>
+
+    <h2 id="galleryName">Perfume Gallery</h2>
+    <p id="galleryPrice"></p>
+
+<p id="galleryDescription" style="font-size:13px;line-height:1.8;color:#70685a;margin:10px 0;"></p>
+
+<button id="galleryEditDescription" class="gallery-admin" type="button" style="font-size:10px;padding:7px 10px;opacity:0.7;">
+  Edit Description
+</button>
+
+    <img id="galleryMainImage" class="gallery-main-image"
+         src="product1.jpg" alt="Perfume">
+
+    <div class="gallery-thumbnails" id="galleryThumbnails"></div>
+
+
+<div style="display:flex;gap:7px;flex-wrap:wrap;margin:10px 0;">
+  <button class="gallery-admin" id="galleryAddImage" type="button">＋ Add Image</button>
+  <button class="gallery-admin" id="galleryDeleteImage" type="button">Delete Image</button>
+</div>
+<input type="file" id="galleryImageFile" accept="image/*" hidden>
+
+
+
+
+
+    <p class="gallery-stock" id="galleryStock"></p>
+
+    <button class="gallery-buy" id="galleryBuy" type="button">
+      Buy Now
+    </button>
+
+    <button class="gallery-admin" id="galleryAdmin" type="button">
+      Update Available Stock
+    </button>
+
+    <p style="font-size:11px;color:#888;margin-top:10px">
+      Select an image to view it. Free delivery details can be confirmed on WhatsApp.
+    </p>
+  </div>
+</div>
+
+
+<!-- WhatsApp Floating Button -->
+<!-- 
+<a
+    href="https://wa.me/923482286886"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Chat on WhatsApp"
+>
+    <span>◉</span>
+</a> -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const ADMIN_PASSWORD = "Muttu@2026"; // Legacy local admin prompt; Supabase also protects online writes.
+  const SUPABASE_URL = "https://mokabgnsznewaoeqacvg.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_1z-5OML0CN4uQCAesaGoMw_rCZXaq1H";
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const REMOTE_TABLE = "products";
+  const PRODUCT_KEY = "muttuFragranceProducts_v2";
+  const CART_KEY = "muttuFragranceCart_v2";
+  const DB_NAME = "MuttuFragranceDB";
+  const DB_VERSION = 1;
+  const STORE_NAME = "data";
+
+  const grid = $("productsGrid");
+  let products = [];
+  let cart = [];
+  let editingId = null;
+  let editAuthorized = false;
+  let addAuthorized = false;
+  let db = null;
+  let storageReady = false;
+
+  function money(value) {
+    return "Rs. " + Number(value || 0).toLocaleString("en-PK");
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, ch => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[ch]);
+  }
+
+  function openDatabase() {
+    return new Promise((resolve, reject) => {
+      if (!("indexedDB" in window)) {
+        reject(new Error("IndexedDB is not supported in this browser."));
+        return;
+      }
+
+      const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+      request.onupgradeneeded = () => {
+        const database = request.result;
+        if (!database.objectStoreNames.contains(STORE_NAME)) {
+          database.createObjectStore(STORE_NAME, { keyPath: "key" });
+        }
+      };
+
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+      request.onblocked = () => reject(new Error("Please close other tabs of this website and try again."));
+    });
+  }
+
+  function dbGet(key) {
+    return new Promise((resolve, reject) => {
+      const request = db.transaction(STORE_NAME, "readonly")
+        .objectStore(STORE_NAME).get(key);
+
+      request.onsuccess = () => resolve(request.result?.value);
+      request.onerror = () => reject(request.error);
+    });
+  }
+
+  function dbPut(key, value) {
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(STORE_NAME, "readwrite");
+      transaction.objectStore(STORE_NAME).put({ key, value });
+
+      transaction.oncomplete = () => resolve(true);
+      transaction.onerror = () => reject(transaction.error);
+      transaction.onabort = () => reject(transaction.error || new Error("Save was cancelled."));
+    });
+  }
+
+  function readSeedProducts() {
+    return [...grid.querySelectorAll(":scope > .product-card")].map((card, i) => ({
+      id: "seed-" + i,
+      name: card.querySelector("h3")?.textContent.trim() || "Fragrance",
+      oldPrice: Number((card.querySelector(".old-price")?.textContent || "").replace(/[^0-9.]/g, "")) || 0,
+      price: Number((card.querySelector(".new-price")?.textContent || "").replace(/[^0-9.]/g, "")) || 0,
+      image: card.querySelector(".product-image img")?.getAttribute("src") || "",
+      description: card.querySelector(".product-description")?.textContent.trim() || "",
+      tag: card.querySelector(".product-tag")?.textContent.trim() || "NEW"
+    }));
+  }
+
+  async function ensureSupabaseLogin() {
+    const { data: sessionData } = await supabase.auth.getSession();
+    if (sessionData?.session) return sessionData.session;
+    const email = prompt("Supabase admin email:");
+    if (!email) return null;
+    const password = prompt("Supabase account password:");
+    if (!password) return null;
+    const { data, error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+    if (error) { alert("Supabase login failed: " + error.message); return null; }
+    return data.session;
+  }
+
+  async function saveProducts() {
+    try {
+      if (!db) throw new Error("Product database is not ready.");
+      await dbPut("products", products);
+      const saved = await dbGet("products");
+      if (!Array.isArray(saved) || saved.length !== products.length) throw new Error("Local save verification failed.");
+      storageReady = true;
+
+      // Sync full product objects to Supabase so they appear on other devices.
+      const session = await ensureSupabaseLogin();
+      if (!session) {
+        alert("Products are saved on this device only. Log in to Supabase to sync them online.");
+        return true;
+      }
+      const { error: clearError } = await supabase.from(REMOTE_TABLE).delete().neq("product_key", "__none__");
+      if (clearError) throw clearError;
+      if (products.length) {
+        const rows = products.map((product, index) => ({
+          product_key: String(product.id ?? ("product-" + index)),
+          product_data: product
+        }));
+        const { error } = await supabase.from(REMOTE_TABLE).upsert(rows, { onConflict: "product_key" });
+        if (error) throw error;
+      }
+      return true;
+    } catch (error) {
+      console.error("Product save/sync error:", error);
+      alert("Local save ho sakta hai, lekin online sync nahi hua: " + (error.message || "Supabase error") + "\nSupabase table columns aur policies check karein.");
+      return false;
+    }
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    } catch (error) {
+      console.error("Cart save error:", error);
+    }
+  }
+
+  function renderProducts() {
+    const query = ($("searchInput")?.value || "").toLowerCase().trim();
+    grid.innerHTML = "";
+
+    products.forEach(product => {
+      if (!String(product.name).toLowerCase().includes(query)) return;
+
+      const card = document.createElement("article");
+      card.className = "product-card";
+      card.dataset.id = product.id;
+      card.dataset.name = product.name;
+
+      card.innerHTML = `
+        <div class="product-image">
+          <img src="${escapeHtml(product.image)}"
+               alt="${escapeHtml(product.name)}" loading="lazy">
+          <span class="product-tag">${escapeHtml(product.tag || "NEW")}</span>
+        </div>
+        <div class="product-info">
+          <p class="product-type">MUTTU COLLECTION</p>
+          <h3>${escapeHtml(product.name)}</h3>
+          <p class="product-description">${escapeHtml(product.description || "A beautiful fragrance from Muttu Fragrance.")}</p>
+          <div class="price">
+            ${product.oldPrice ? `<span class="old-price">${money(product.oldPrice)}</span>` : ""}
+            <span class="new-price">${money(product.price)}</span>
+          </div>
+          <a href="https://wa.me/923482286886?text=${encodeURIComponent("Assalam-o-Alaikum, I want to order " + product.name + " perfume.")}"
+             target="_blank" rel="noopener" class="whatsapp-button">Order on WhatsApp</a>
+          <button class="add-to-cart" type="button" data-cart-add="${escapeHtml(product.id)}">＋ Add to Cart</button>
+      
+<div class="product-admin-actions">
+  <button class="edit-button" type="button"
+    data-edit="${escapeHtml(product.id)}">Edit</button>
+
+  <button class="delete-button" type="button"
+    data-delete="${escapeHtml(product.id)}">Delete</button>
+</div>
+        </div>`;
+
+      grid.appendChild(card);
+    });
+  }
+
+  async function loadSavedData() {
+    try {
+      db = await openDatabase();
+
+      // Public visitors read the shared online catalogue.
+      let remoteProducts = null;
+      try {
+        const { data, error } = await supabase.from(REMOTE_TABLE).select("product_key,product_data").order("created_at", { ascending: true });
+        if (error) throw error;
+        if (Array.isArray(data) && data.length) remoteProducts = data.map(row => row.product_data).filter(Boolean);
+      } catch (remoteError) {
+        console.warn("Online catalogue not available yet:", remoteError.message);
+      }
+
+      let savedProducts = await dbGet("products");
+      if (remoteProducts && remoteProducts.length) {
+        savedProducts = remoteProducts;
+        await dbPut("products", savedProducts);
+      }
+
+      if (!Array.isArray(savedProducts)) {
+        // Migrate existing localStorage products without deleting them.
+        const legacy = localStorage.getItem(PRODUCT_KEY);
+
+        if (legacy) {
+          try {
+            const parsed = JSON.parse(legacy);
+            savedProducts = Array.isArray(parsed) ? parsed : readSeedProducts();
+          } catch {
+            savedProducts = readSeedProducts();
+          }
+        } else {
+          savedProducts = readSeedProducts();
+        }
+
+        await dbPut("products", savedProducts);
+      }
+
+
+
+
+
+products = savedProducts;
+
+products.forEach(product => {
+  getProductGallery(product);
+});
+
+await dbPut("products", products);
+      // products = savedProducts;
+      storageReady = true;
+    } catch (error) {
+      console.error("Database loading error:", error);
+      alert("Product database open nahi hui. Website ko HTTPS par khol kar dobara try karein.");
+      products = [];
+      storageReady = false;
+    }
+
+    try {
+      cart = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+      if (!Array.isArray(cart)) cart = [];
+    } catch {
+      cart = [];
+    }
+
+    renderProducts();
+    renderCart();
+  }
+
+  function renderCart() {
+    const count = cart.reduce((sum, item) => sum + item.qty, 0);
+    $("cartCount").textContent = count;
+
+    const items = $("cartItems");
+
+    if (!cart.length) {
+      items.innerHTML = '<p style="padding:20px;text-align:center;color:#777">Your cart is empty. Add a fragrance to get started.</p>';
+    } else {
+      items.innerHTML = cart.map(item => `
+        <div class="cart-row">
+          <img src="${escapeHtml(item.image)}" alt="">
+          <div>
+            <h4>${escapeHtml(item.name)}</h4>
+            <p>${money(item.price)} × ${item.qty}</p>
+            <div style="display:flex;gap:6px;margin-top:8px">
+              <button type="button" data-qty-minus="${escapeHtml(item.id)}">−</button>
+              <button type="button" data-qty-plus="${escapeHtml(item.id)}">＋</button>
+              <button type="button" data-cart-remove="${escapeHtml(item.id)}">Remove</button>
+            </div>
+          </div>
+          <strong>${money(item.price * item.qty)}</strong>
+        </div>`).join("");
+    }
+
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    $("cartTotal").textContent = money(total);
+
+    const orderLines = cart.map(item =>
+      `${item.name} x${item.qty} - ${money(item.price * item.qty)}`
+    ).join("\n");
+
+    const message = `Assalam-o-Alaikum, I want to order:\n${orderLines}\nTotal: ${money(total)}`;
+    $("cartCheckout").href = "https://wa.me/923482286886?text=" + encodeURIComponent(message);
+
+    saveCart();
+  }
+
+  function openModal(id) {
+    $(id).classList.add("show");
+  }
+
+  function closeModal(id) {
+    $(id).classList.remove("show");
+  }
+
+  function compressImage(file) {
+    return new Promise((resolve, reject) => {
+      if (!file) return resolve(null);
+
+      if (!file.type.startsWith("image/")) {
+        return reject(new Error("Please choose an image file."));
+      }
+
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Image could not be read."));
+
+      reader.onload = () => {
+        const img = new Image();
+        img.onerror = () => reject(new Error("Invalid image file."));
+
+        img.onload = () => {
+          const maxSize = 500;
+          const scale = Math.min(1, maxSize / Math.max(img.width, img.height));
+          const canvas = document.createElement("canvas");
+
+          canvas.width = Math.max(1, Math.round(img.width * scale));
+          canvas.height = Math.max(1, Math.round(img.height * scale));
+
+          const context = canvas.getContext("2d");
+          context.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+          resolve(canvas.toDataURL("image/jpeg", 0.45));
+        };
+
+        img.src = reader.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function showSlide(index) {
+    const slides = $("slides");
+    const dots = document.querySelectorAll(".dot");
+    if (!slides) return;
+
+    const total = slides.children.length || 3;
+    window.currentSlide = ((index % total) + total) % total;
+    slides.style.transform = `translateX(-${window.currentSlide * (100 / total)}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === window.currentSlide));
+  }
+
+  $("menuButton")?.addEventListener("click", () => {
+    $("mobileMenu").classList.toggle("show");
+    $("menuButton").textContent = $("mobileMenu").classList.contains("show") ? "×" : "☰";
+  });
+
+  document.querySelectorAll(".mobile-menu a").forEach(a => {
+    a.addEventListener("click", () => {
+      $("mobileMenu").classList.remove("show");
+      $("menuButton").textContent = "☰";
+    });
+  });
+
+  $("nextBtn")?.addEventListener("click", () => showSlide((window.currentSlide || 0) + 1));
+  $("prevBtn")?.addEventListener("click", () => showSlide((window.currentSlide || 0) - 1));
+  document.querySelectorAll(".dot").forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
+  setInterval(() => showSlide((window.currentSlide || 0) + 1), 4500);
+  $("searchInput")?.addEventListener("input", renderProducts);
+
+  grid.addEventListener("click", async event => {
+    const addButton = event.target.closest("[data-cart-add]");
+
+    if (addButton) {
+      const product = products.find(p => p.id === addButton.dataset.cartAdd);
+      if (!product) return;
+
+      const existing = cart.find(item => item.id === product.id);
+      if (existing) existing.qty += 1;
+      else cart.push({
+        id: product.id,
+        name: product.name,
+        price: Number(product.price),
+        image: product.image,
+        qty: 1
+      });
+
+      renderCart();
+      $("cartPanel").classList.add("open");
+      $("cartOverlay").classList.add("show");
+      return;
+    }
+
+
+
+
+const deleteButton = event.target.closest("[data-delete]");
+
+if (deleteButton) {
+  const password = prompt("Enter admin password to delete this product:");
+
+  if (password !== ADMIN_PASSWORD) {
+    if (password !== null) alert("Incorrect admin password.");
+    return;
+  }
+
+  const productId = deleteButton.dataset.delete;
+  const product = products.find(p => p.id === productId);
+
+  if (!product) {
+    alert("Product not found.");
+    return;
+  }
+
+  if (!confirm(`Are you sure you want to delete "${product.name}"?`)) {
+    return;
+  }
+
+  const previousProducts = products;
+  products = products.filter(p => p.id !== productId);
+
+  if (await saveProducts()) {
+    cart = cart.filter(item => item.id !== productId);
+    saveCart();
+    renderProducts();
+    renderCart();
+    alert("Product deleted successfully!");
+  } else {
+    products = previousProducts;
+    renderProducts();
+    alert("Product delete nahi hua. Dobara try karein.");
+  }
+
+  return;
+}
+
+    const editButton = event.target.closest("[data-edit]");
+    if (!editButton) return;
+
+    editingId = editButton.dataset.edit;
+    editAuthorized = false;
+    $("adminPassword").value = "";
+    $("editForm").classList.remove("show");
+    $("editImageFile").value = "";
+    openModal("editModal");
+  });
+
+  $("passwordButton").addEventListener("click", () => {
+    if ($("adminPassword").value !== ADMIN_PASSWORD) {
+      alert("Incorrect admin password.");
+      $("adminPassword").value = "";
+      return;
+    }
+
+    const product = products.find(item => item.id === editingId);
+    if (!product) return;
+
+    editAuthorized = true;
+    $("editName").value = product.name;
+    $("editOldPrice").value = product.oldPrice || "";
+    $("editNewPrice").value = product.price || "";
+    $("editDescription").value = product.description || "";
+    $("editForm").classList.add("show");
+  });
+
+  $("saveEdit").addEventListener("click", async () => {
+    if (!editAuthorized) return alert("Please enter the admin password first.");
+
+    const product = products.find(item => item.id === editingId);
+    if (!product) return;
+
+    const name = $("editName").value.trim();
+    const oldPrice = $("editOldPrice").value.trim();
+    const price = $("editNewPrice").value.trim();
+
+    if (!name || !price || !Number.isFinite(Number(price))) {
+      return alert("Please enter a valid product name and sale price.");
+    }
+
+    try {
+      const image = await compressImage($("editImageFile").files[0]);
+
+      const previous = { ...product };
+      product.name = name;
+      product.oldPrice = Number(oldPrice) || 0;
+      product.price = Number(price);
+      product.description = $("editDescription").value.trim();
+      if (image) product.image = image;
+
+      if (await saveProducts()) {
+        renderProducts();
+        closeModal("editModal");
+        alert("Product updated and saved.");
+      } else {
+        Object.assign(product, previous);
+      }
+    } catch (error) {
+      alert(error.message || "Could not update product.");
+    }
+  });
+
+  $("addProductButton").addEventListener("click", () => {
+    addAuthorized = false;
+    $("addPassword").value = "";
+    $("addForm").classList.remove("show");
+    openModal("addModal");
+  });
+
+  $("addPasswordButton").addEventListener("click", () => {
+    if ($("addPassword").value !== ADMIN_PASSWORD) {
+      alert("Incorrect admin password.");
+      $("addPassword").value = "";
+      return;
+    }
+
+    addAuthorized = true;
+    $("addForm").classList.add("show");
+  });
+
+  $("saveNewProduct").addEventListener("click", async () => {
+    if (!addAuthorized) return alert("Please enter the admin password first.");
+    if (!storageReady || !db) return alert("Product database ready nahi hai. Page refresh karke try karein.");
+
+    const name = $("newProductName").value.trim();
+    const oldPrice = $("newOldPrice").value.trim();
+    const price = $("newSalePrice").value.trim();
+    const description = $("newProductDescription").value.trim();
+    const file = $("newProductImage").files[0];
+
+    if (!name || !price || !Number.isFinite(Number(price)) || !file) {
+      return alert("Please enter product name, valid sale price, and choose an image.");
+    }
+
+    const button = $("saveNewProduct");
+    button.disabled = true;
+    button.textContent = "Saving...";
+
+    const product = {
+      id: "p-" + Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+      name,
+      oldPrice: Number(oldPrice) || 0,
+      price: Number(price),
+      image: "",
+      description,
+      tag: "NEW"
+    };
+
+    try {
+      product.image = await compressImage(file);
+      product.galleryImages = [product.image];
+      products.push(product);
+
+      if (await saveProducts()) {
+        renderProducts();
+        closeModal("addModal");
+
+        ["newProductName", "newOldPrice", "newSalePrice", "newProductImage", "newProductDescription"]
+          .forEach(id => { $(id).value = ""; });
+
+        alert("Product added and saved! Refresh karke check karein.");
+      } else {
+        products = products.filter(item => item.id !== product.id);
+      }
+    } catch (error) {
+      products = products.filter(item => item.id !== product.id);
+      alert(error.message || "Could not save product. Please try again.");
+    } finally {
+      button.disabled = false;
+      button.textContent = "Add Product";
+    }
+  });
+
+  $("closeEditModal").addEventListener("click", () => closeModal("editModal"));
+  $("closeAddModal").addEventListener("click", () => closeModal("addModal"));
+
+  window.addEventListener("click", event => {
+    if (event.target === $("editModal")) closeModal("editModal");
+    if (event.target === $("addModal")) closeModal("addModal");
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeModal("editModal");
+      closeModal("addModal");
+      closeCart();
+    }
+  });
+
+  function closeCart() {
+    $("cartPanel").classList.remove("open");
+    $("cartOverlay").classList.remove("show");
+  }
+
+  $("cartToggle").addEventListener("click", () => {
+    $("cartPanel").classList.add("open");
+    $("cartOverlay").classList.add("show");
+  });
+
+  $("cartClose").addEventListener("click", closeCart);
+  $("cartOverlay").addEventListener("click", closeCart);
+
+  $("cartItems").addEventListener("click", event => {
+    const minus = event.target.closest("[data-qty-minus]");
+    const plus = event.target.closest("[data-qty-plus]");
+    const remove = event.target.closest("[data-cart-remove]");
+    const button = minus || plus || remove;
+    if (!button) return;
+
+    const id = button.dataset.qtyMinus || button.dataset.qtyPlus || button.dataset.cartRemove;
+    const item = cart.find(p => p.id === id);
+    if (!item) return;
+
+    if (minus) item.qty--;
+    if (plus) item.qty++;
+    if (remove || item.qty < 1) cart = cart.filter(p => p.id !== id);
+
+    renderCart();
+  });
+
+
+
+
+
+
+
+
+
+
+/* ===== MUTTU: SEPARATE PRODUCT GALLERIES + STOCK ===== */
+
+let galleryProductId = null;
+let selectedGalleryImage = null;
+
+function getProductGallery(product) {
+  if (!Array.isArray(product.galleryImages)) {
+    product.galleryImages = product.image ? [product.image] : [];
+  }
+
+  // Ensure the main product image is included.
+  if (product.image && !product.galleryImages.includes(product.image)) {
+    product.galleryImages.unshift(product.image);
+  }
+
+  return product.galleryImages;
+}
+
+function openProductGallery(product) {
+  galleryProductId = product.id;
+
+  $("galleryName").textContent = product.name;
+  $("galleryPrice").textContent = money(product.price);
+
+$("galleryDescription").textContent =
+  product.description || "No description added yet.";
+
+  $("galleryStock").textContent =
+    "Available: " + (Number(product.stock) || 0) + " pieces";
+
+  renderGalleryImages(product);
+
+  $("galleryBuy").onclick = () => {
+    if (!(Number(product.stock) > 0)) {
+      alert("Sorry, this perfume is currently out of stock.");
+      return;
+    }
+
+    const message =
+      "Assalam-o-Alaikum, I want to buy " + product.name +
+      ". Price: " + money(product.price) +
+      ". Please confirm availability and delivery.";
+
+    window.open(
+      "https://wa.me/923482286886?text=" +
+      encodeURIComponent(message),
+      "_blank"
+    );
+  };
+
+  $("galleryAdmin").onclick = async () => {
+    const password = prompt("Enter admin password:");
+
+    if (password !== ADMIN_PASSWORD) {
+      if (password !== null) alert("Incorrect password.");
+      return;
+    }
+
+    const quantity = prompt(
+      "Enter available pieces:",
+      String(Number(product.stock) || 0)
+    );
+
+    if (quantity === null || quantity.trim() === "") return;
+
+    const stock = Number(quantity);
+
+    if (!Number.isInteger(stock) || stock < 0) {
+      alert("Enter a valid quantity (0 or more).");
+      return;
+    }
+
+    const oldStock = product.stock;
+    product.stock = stock;
+
+    if (await saveProducts()) {
+      $("galleryStock").textContent = "Available: " + stock + " pieces";
+      alert("Available stock updated successfully!");
+    } else {
+      product.stock = oldStock;
+    }
+  };
+
+  $("galleryModal").classList.add("show");
+}
+
+function renderGalleryImages(product) {
+  const images = getProductGallery(product);
+  const thumbnails = $("galleryThumbnails");
+
+  thumbnails.innerHTML = "";
+
+  if (!images.length) {
+    $("galleryMainImage").removeAttribute("src");
+    selectedGalleryImage = null;
+    return;
+  }
+
+  if (!images.includes(selectedGalleryImage)) {
+    selectedGalleryImage = images[0];
+  }
+
+  $("galleryMainImage").src = selectedGalleryImage;
+
+  images.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = product.name;
+    img.title = "View image";
+
+    img.style.border =
+      src === selectedGalleryImage
+        ? "2px solid #c9a34e"
+        : "1px solid #ddd";
+
+    img.addEventListener("click", () => {
+      selectedGalleryImage = src;
+      renderGalleryImages(product);
+    });
+
+    thumbnails.appendChild(img);
+  });
+}
+
+/* Add an image ONLY to the currently selected product */
+
+/* Edit and save each product's own gallery description */
+$("galleryEditDescription").addEventListener("click", async () => {
+  const password = prompt("Enter admin password to edit description:");
+
+  if (password === null) return;
+
+  if (password !== ADMIN_PASSWORD) {
+    alert("Incorrect password.");
+    return;
+  }
+
+  const product = products.find(p => p.id === galleryProductId);
+  if (!product) return;
+
+  const newDescription = prompt(
+    "Write this perfume's description:",
+    product.description || ""
+  );
+
+  if (newDescription === null) return;
+
+  const oldDescription = product.description;
+  product.description = newDescription.trim();
+
+  if (await saveProducts()) {
+    $("galleryDescription").textContent =
+      product.description || "No description added yet.";
+
+    renderProducts();
+    alert("Description saved successfully!");
+  } else {
+    product.description = oldDescription;
+  }
+});
+
+$("galleryAddImage").addEventListener("click", () => {
+  const password = prompt("Enter admin password to add an image:");
+
+  if (password !== ADMIN_PASSWORD) {
+    if (password !== null) alert("Incorrect password.");
+    return;
+  }
+
+  const product = products.find(p => p.id === galleryProductId);
+  if (!product) return;
+
+  $("galleryImageFile").value = "";
+  $("galleryImageFile").click();
+});
+
+$("galleryImageFile").addEventListener("change", async () => {
+  const file = $("galleryImageFile").files[0];
+  if (!file) return;
+
+  const product = products.find(p => p.id === galleryProductId);
+  if (!product) return;
+
+  const button = $("galleryAddImage");
+  button.disabled = true;
+  button.textContent = "Saving...";
+
+  try {
+    const image = await compressImage(file);
+    if (!image) return;
+
+    const images = getProductGallery(product);
+    images.push(image);
+
+    if (await saveProducts()) {
+      selectedGalleryImage = image;
+      renderGalleryImages(product);
+      alert("Image added to this product's gallery!");
+    } else {
+      images.pop();
+      renderGalleryImages(product);
+    }
+  } catch (error) {
+    alert(error.message || "Image could not be added.");
+  } finally {
+    button.disabled = false;
+    button.textContent = "＋ Add Image";
+    $("galleryImageFile").value = "";
+  }
+});
+
+/* Delete the currently selected image */
+$("galleryDeleteImage").addEventListener("click", async () => {
+  const password = prompt("Enter admin password to delete an image:");
+
+  if (password !== ADMIN_PASSWORD) {
+    if (password !== null) alert("Incorrect password.");
+    return;
+  }
+
+  const product = products.find(p => p.id === galleryProductId);
+  if (!product) return;
+
+  const images = getProductGallery(product);
+
+  if (!selectedGalleryImage || !images.includes(selectedGalleryImage)) {
+    alert("Please select an image first.");
+    return;
+  }
+
+  if (images.length <= 1) {
+    alert("Keep at least one image for this product.");
+    return;
+  }
+
+  if (!confirm("Delete this image from this product's gallery?")) return;
+
+  const oldImages = [...images];
+  const oldSelected = selectedGalleryImage;
+
+  product.galleryImages = images.filter(
+    src => src !== selectedGalleryImage
+  );
+
+  // If the main product image was deleted, use the first remaining image.
+  if (product.image === selectedGalleryImage) {
+    product.image = product.galleryImages[0];
+  }
+
+  selectedGalleryImage = product.galleryImages[0];
+
+  if (await saveProducts()) {
+    renderGalleryImages(product);
+    renderProducts();
+    alert("Gallery image deleted successfully!");
+  } else {
+    product.galleryImages = oldImages;
+    product.image = oldSelected === product.image
+      ? product.image
+      : product.image;
+    selectedGalleryImage = oldSelected;
+    renderGalleryImages(product);
+  }
+});
+
+$("galleryClose").addEventListener("click", () => {
+  $("galleryModal").classList.remove("show");
+});
+
+$("galleryModal").addEventListener("click", event => {
+  if (event.target === $("galleryModal")) {
+    $("galleryModal").classList.remove("show");
+  }
+});
+
+/* Open the gallery for the exact product clicked */
+$("productsGrid").addEventListener("click", event => {
+  if (event.target.closest(
+    "button, a, input, textarea, .product-admin-actions"
+  )) return;
+
+  const card = event.target.closest(".product-card");
+  if (!card) return;
+
+  const product = products.find(p => p.id === card.dataset.id);
+  if (product) openProductGallery(product);
+});
+
+
+
+
+
+
+// /* ===== MUTTU PRODUCT GALLERY + STOCK ===== */
+
+// const galleryImages = [
+//   "product1.jpg",
+//   "product2.jpg",
+//   "product3.jpg",
+//   "slaider1.jpg",
+//   "slaideer2.jpg",
+//   "slaider3.jpg",
+//   "slaider4.jpg"
+// ];
+
+// let galleryProductId = null;
+
+// function openProductGallery(product) {
+//   galleryProductId = product.id;
+
+//   $("galleryName").textContent = product.name;
+//   $("galleryPrice").textContent = money(product.price);
+//   $("galleryStock").textContent =
+//     "Available: " + (Number(product.stock) || 0) + " pieces";
+
+//   const images = [...new Set([
+//     product.image,
+//     ...galleryImages
+//   ].filter(Boolean))];
+
+//   $("galleryMainImage").src = images[0];
+//   $("galleryThumbnails").innerHTML = "";
+
+//   images.forEach(src => {
+//     const img = document.createElement("img");
+//     img.src = src;
+//     img.alt = product.name;
+//     img.addEventListener("click", () => {
+//       $("galleryMainImage").src = src;
+//     });
+//     $("galleryThumbnails").appendChild(img);
+//   });
+
+//   $("galleryBuy").onclick = () => {
+//     if (!(Number(product.stock) > 0)) {
+//       alert("Sorry, this perfume is currently out of stock.");
+//       return;
+//     }
+
+//     const message =
+//       "Assalam-o-Alaikum, I want to buy " + product.name +
+//       ". Price: " + money(product.price) +
+//       ". Please confirm availability and delivery.";
+
+//     window.open(
+//       "https://wa.me/923482286886?text=" +
+//       encodeURIComponent(message),
+//       "_blank"
+//     );
+//   };
+
+//   $("galleryAdmin").onclick = async () => {
+//     const password = prompt("Enter admin password:");
+
+//     if (password !== ADMIN_PASSWORD) {
+//       if (password !== null) alert("Incorrect password.");
+//       return;
+//     }
+
+//     const quantity = prompt(
+//       "Enter available pieces:",
+//       String(Number(product.stock) || 0)
+//     );
+
+//     if (quantity === null || quantity.trim() === "") return;
+
+//     const stock = Number(quantity);
+
+//     if (!Number.isInteger(stock) || stock < 0) {
+//       alert("Enter a valid quantity (0 or more).");
+//       return;
+//     }
+
+//     const oldStock = product.stock;
+//     product.stock = stock;
+
+//     if (await saveProducts()) {
+//       $("galleryStock").textContent =
+//         "Available: " + stock + " pieces";
+//       alert("Available stock updated successfully!");
+//     } else {
+//       product.stock = oldStock;
+//     }
+//   };
+
+//   $("galleryModal").classList.add("show");
+// }
+
+// $("galleryClose").addEventListener("click", () => {
+//   $("galleryModal").classList.remove("show");
+// });
+
+// $("galleryModal").addEventListener("click", event => {
+//   if (event.target === $("galleryModal")) {
+//     $("galleryModal").classList.remove("show");
+//   }
+// });
+
+// /* Open gallery when customer clicks a product image or card */
+// $("productsGrid").addEventListener("click", event => {
+//   if (event.target.closest(
+//     "button, a, input, textarea, .product-admin-actions"
+//   )) return;
+
+//   const card = event.target.closest(".product-card");
+//   if (!card) return;
+
+//   const product = products.find(p => p.id === card.dataset.id);
+//   if (product) openProductGallery(product);
+// });
+
+// /* Default stock for existing products */
+
+
+  loadSavedData().then(() => showSlide(0));
+})();
+</script>
+
+
+
+
+</body>
+</html>
+
